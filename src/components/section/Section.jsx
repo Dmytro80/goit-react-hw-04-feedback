@@ -1,4 +1,4 @@
-export const Section = ({ title, children }) => {
+const Section = ({ title, children }) => {
   return (
     <section>
       <h2>{title}</h2>
@@ -6,3 +6,5 @@ export const Section = ({ title, children }) => {
     </section>
   );
 };
+
+export default Section;

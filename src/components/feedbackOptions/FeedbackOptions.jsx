@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div>
       {options.map(option => {
@@ -18,3 +18,5 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     </div>
   );
 };
+
+export default FeedbackOptions;

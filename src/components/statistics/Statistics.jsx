@@ -1,11 +1,7 @@
-export const Statistics = ({
-  good,
-  neutral,
-  bad,
-  total,
-  positivePercentage,
-}) => {
-  return (
+import Notification from '../notificationComponent';
+
+const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
+  return total() > 0 ? (
     <ul>
       <li>Good: {good}</li>
       <li>Neutral: {neutral}</li>
@@ -16,5 +12,9 @@ export const Statistics = ({
         {positivePercentage()}%
       </li>
     </ul>
+  ) : (
+    <Notification message="There is no feedback" />
   );
 };
+
+export default Statistics;
