@@ -1,22 +1,23 @@
 import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
+import { ButtonWrapper, FeedbackButton } from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <div>
+    <ButtonWrapper>
       {options.map(option => {
         const btnId = nanoid();
         return (
-          <button
+          <FeedbackButton
             type="button"
             key={btnId}
             onClick={() => onLeaveFeedback(option)}
           >
             {option}
-          </button>
+          </FeedbackButton>
         );
       })}
-    </div>
+    </ButtonWrapper>
   );
 };
 
